@@ -1,0 +1,367 @@
+/*header*/
+header{
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 125%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* brand title */
+.brand-title {
+    text-decoration: underline;
+    text-decoration-color: goldenrod;
+    text-underline-offset: 10px;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Merriweather", serif;
+}
+
+/* logo */
+.brand-logo {
+        height: 210px; /* Reverted height */
+        width: auto; /* Maintains the correct aspect ratio */
+        object-fit: contain; /* Ensures the image fits nicely */
+
+        position: absolute; /* Positions the logo independently within the header */
+        right: 30px; /* Aligns the logo to the right side */
+        top: 15px; /* Adds more space from the top edge as requested */
+        z-index: 2000; /* Layers the logo above the navigation bar */
+
+        margin: 0; /* Removes default margins */
+
+        /* shield-shape outline */
+        filter:
+            drop-shadow(0 0 0px goldenrod) /* Adds a subtle gold glow effect */
+            drop-shadow(0 0 0px goldenrod); /* Adds a stronger outer glow */
+
+}
+/*body*/
+body{
+        max-width: 100%;
+        overflow-x: hidden;
+        padding: 0;
+        text-align: left;
+        margin: 0;
+        font-family: "Playfair Display", serif;
+        background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
+        background-attachment: fixed;
+        color:white;
+        font-size: 20px;
+        line-height: 1.2em;
+}
+.section {
+        /*section*/
+ margin-bottom: 40px;
+}
+/*section-title*/
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 25px;
+    font-family: "Playfair Display", serif ;
+    color: white;
+    font-size: 1.5em;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 110%;
+    height: 3px;
+    background: navy;
+}
+
+/*section-subtitle*/
+.section-subtitle {
+    font-size: 20px;
+    color: lightgray;
+    margin-bottom: 15px;
+}
+/*intro section*/
+.intro {
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(6px);
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    color: white;
+    font-size: 1em;
+    
+}
+/*main doc*/
+.main-content{ 
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 60px 60px;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(6px);
+  border-radius: 18px;
+}
+/*flex box*/
+.content-sections {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+.content-sections .Aim-Vision {
+    flex: 1 1 calc(50% - 15px); /* Two columns with gap */
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    box-sizing: border-box;
+}
+.content-sections .Business {
+    flex: 1 1 calc(50% - 15px); /* Two columns with gap */
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    box-sizing: border-box;
+}
+.content-sections .Upcoming-Projects {
+    flex: 1 1 calc(50% - 15px); /* Two columns with gap */
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    box-sizing: border-box;
+}
+.content-sections .Investors {
+    flex: 1 1 calc(50% - 15px); /* Two columns with gap */
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    box-sizing: border-box;
+}
+.content-sections .Careers{
+    flex: 1 1 calc(50% - 15px); /* Two columns with gap */
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    box-sizing: border-box;
+}
+.content-sections .Support{
+    flex: 1 1 calc(50% - 15px); /* Two columns with gap */
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    box-sizing: border-box;
+}
+
+/* Split each content section into text (left) and media (right) */
+.content-sections > div {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+.content-sections > div .section-text { flex: 1 1 50%; }
+.content-sections > div .section-media { flex: 1 1 50%; display:flex; align-items:center; justify-content:center; }
+.section-img { max-width: 100%; height: auto; border-radius: 8px; object-fit: cover; }
+/*login-signup*/
+.login-signup-links{
+   text-align: right;
+   position: absolute;
+   margin-right: 140px; /*Reverted position*/
+   top: 20px;
+   right: 90px;
+   text-align: right;
+   font-family: "Playfair Display", serif;
+   font-size: 14px;
+}
+.login-signup-icons{
+    height: 5px;
+    width: 5px;
+    fill: currentColor;
+}
+.login-signup-links a{
+    color: yellowgreen;
+    margin-left: 10px;
+    text-decoration: none;
+}
+.login-signup-links a:hover {
+  color: goldenrod;
+}
+.login-signup-links:visited{
+    color: #f5f5f5;
+}
+.login-signup-links:active{
+    color: goldenrod;
+}
+
+/*nav-bar*/
+#nav-bar{
+    background: rgba(0, 0, 0, 0.8);
+    padding: 14px 28px;
+    text-align: center;
+    margin-top: 30px; /* Reverted margin */
+    border-top: 3px ridge goldenrod;
+    border-bottom: 3px ridge goldenrod;
+    border-radius: 0;
+    width: calc(100% + 80px);
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: "Playfair Display", serif;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.10);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#nav-bar input[type="checkbox"] {
+    display: none;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+    order: -1;
+}
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: goldenrod;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+.nav-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#nav-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+}
+.nav-icons{
+height: 24px;
+width: 24px;
+fill: currentColor;
+}
+
+#nav-bar a{
+      display: inline-block;
+      text-decoration: none;
+      color: goldenrod;
+      padding: 10px 18px;
+      letter-spacing: 0.5px;
+}
+#nav-bar a:hover{
+    color: white;
+    background-color: rgba(255, 215, 0, 0.08);
+    border-radius: 6px;
+}
+#nav-bar a:active{
+    color: goldenrod;
+    background-color: rgba(255, 215, 0, 0.15);
+    border-radius: 6px;
+}
+/*footer*/
+footer{
+    background-color:rgba(0,0,0,0.7);
+    padding: 50px;
+    position: relative;
+    text-align: center;
+    font-size: 100%;
+    font-family: "Playfair Display", serif;
+    color: white;
+    width: 100%;
+    bottom:0
+}
+
+@media screen and (max-width: 768px) {
+    /* Responsive adjustments for smaller screens */
+    header {
+        padding: 30px;
+        font-size: 110%;
+    }
+    .brand-logo {
+        height: 180px;
+        right: 20px;
+        top: 10px;
+    }
+    #nav-bar {
+        font-size: 18px;
+        padding: 12px 20px;
+        margin-top: 20px;
+        justify-content: flex-start;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .nav-links {
+        display: none;
+    }
+    .content-sections > div {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .content-sections > div .section-text,
+    .content-sections > div .section-media {
+        flex: 1 1 100%;
+    }
+    .content-sections > div .section-media {
+        height: auto; /* Allow height to adjust based on content */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    header {
+        padding: 20px;
+        font-size: 100%;
+    }
+    .brand-logo {
+        height: 120px;
+        top: 5px;
+        right: 10px;
+    }
+    #nav-bar {
+        font-size: 14px;
+        padding: 8px 10px;
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-content {
+        padding: 30px 30px;
+    }
+    .content-sections > div {
+        gap: 20px;
+    }
+    .section-media {
+        height: 200px;
+    }
+    footer {
+        padding: 30px;
+        font-size: 90%;
+    }
+}
+
