@@ -312,6 +312,7 @@ footer{
         padding: 12px 20px;
         margin-top: 20px;
         justify-content: flex-start;
+        width: 100%;
     }
     .hamburger {
         display: flex;
@@ -349,6 +350,7 @@ footer{
         margin-top: 15px;
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
     .main-content {
         padding: 30px 30px;
