@@ -1,6 +1,29 @@
+/* CSS Variables */
+:root {
+    /* Colors */
+    --bg-body: #0f172a;
+    --bg-header: #111827;
+    --bg-card: #1e293b;
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+    --text-title: #f8fafc;
+    --text-brand: #f3f4f6;
+    --text-footer: #64748b;
+    --accent-color: #ca8a04;
+    --accent-hover: #facc15;
+    --border-color: #334155;
+
+    /* Fonts */
+    --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-brand: "Merriweather", serif;
+    --font-heading: "Playfair Display", serif;
+
+    /* animation */
+    
+}
 /*header*/
 header{
-    background: #111827; /* Corporate Dark Slate */
+    background: var(--bg-header);
     padding: 0 40px;
     height: 80px; /* Fixed professional height */
     width: 100%;
@@ -21,11 +44,11 @@ header{
 /* brand title */
 .brand-title {
     text-decoration: none;
-    color: #f3f4f6;
+    color: var(--text-brand);
     font-weight: 700;
     font-size: 1.5rem;
     margin: 0;
-    font-family: "Merriweather", serif;
+    font-family: var(--font-brand);
     white-space: nowrap;
 }
 
@@ -46,10 +69,10 @@ body{
         padding: 0;
         text-align: left;
         margin: 0;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Clean corporate font */
+        font-family: var(--font-body);
         background-image: none;
-        background-color: #0f172a; /* Deep Navy/Slate background */
-        color: #e2e8f0; /* Soft white text */
+        background-color: var(--bg-body);
+        color: var(--text-main);
         font-size: 16px;
         line-height: 1.6;
 }
@@ -62,8 +85,8 @@ body{
     position: relative;
     display: inline-block;
     margin-bottom: 20px;
-    font-family: "Playfair Display", serif ;
-    color: #f8fafc;
+    font-family: var(--font-heading);
+    color: var(--text-title);
     font-size: 2rem;
 }
 
@@ -72,7 +95,7 @@ body{
     display: block;
     height: 3px;
     width: 60px; /* Minimalist underline */
-    background: #ca8a04; /* Muted Gold */
+    background: var(--accent-color);
     margin-top: 10px;
     position: static;
 }
@@ -80,7 +103,7 @@ body{
 /*section-subtitle*/
 .section-subtitle {
     font-size: 1.1rem;
-    color: #94a3b8; /* Muted text */
+    color: var(--text-muted);
     margin-bottom: 30px;
     max-width: 800px;
 }
@@ -91,8 +114,8 @@ body{
     padding: 60px 0;
     border-radius: 0;
     box-shadow: none;
-    border-bottom: 1px solid #334155;
-    color: #e2e8f0;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-main);
     font-size: 1em;
     
 }
@@ -115,60 +138,21 @@ body{
 }
 
 /* Unified Card Style for all sections */
-.content-sections .Aim-Vision {
+.content-sections > div {
     flex: 1 1 100%;
-    background: #1e293b; /* Solid card background */
+    background: var(--bg-card);
     padding: 0;
     border-radius: 8px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    border: 1px solid #374151;
+    border: 1px solid var(--border-color);
     box-sizing: border-box;
+    /* animation: rj1 0.7s infinite alternate; */
 }
-.content-sections .Business {
-    flex: 1 1 100%;
-    background: #1e293b;
-    padding: 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    border: 1px solid #374151;
-    box-sizing: border-box;
-}
-.content-sections .Upcoming-Projects {
-    flex: 1 1 100%;
-    background: #1e293b;
-    padding: 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    border: 1px solid #374151;
-    box-sizing: border-box;
-}
-.content-sections .Investors {
-    flex: 1 1 100%;
-    background: #1e293b;
-    padding: 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    border: 1px solid #374151;
-    box-sizing: border-box;
-}
-.content-sections .Careers{
-    flex: 1 1 100%;
-    background: #1e293b;
-    padding: 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    border: 1px solid #374151;
-    box-sizing: border-box;
-}
-.content-sections .Support{
-    flex: 1 1 100%;
-    background: #1e293b;
-    padding: 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    border: 1px solid #374151;
-    box-sizing: border-box;
-}
+
+/* @keyframes rj1 {
+    from { width: 100%; }
+    to { width: 90%; }
+} */
 
 /* Split each content section into text (left) and media (right) */
 .content-sections > div {
@@ -211,10 +195,10 @@ body{
    right: 20px;
    top: auto;
    margin: 0;
-   background: #1e293b;
+   background: var(--bg-card);
    padding: 10px;
    border-radius: 8px;
-   border: 1px solid #334155;
+   border: 1px solid var(--border-color);
    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
    z-index: 2000;
 }
@@ -224,20 +208,20 @@ body{
     fill: currentColor;
 }
 .login-signup-links a{
-    color: #ca8a04;
+    color: var(--accent-color);
     margin: 0 5px;
     text-decoration: none;
     font-size: 0.9rem;
     font-family: sans-serif;
 }
 .login-signup-links a:hover {
-  color: #facc15;
+  color: var(--accent-hover);
 }
 .login-signup-links:visited{
-    color: #ca8a04;
+    color: var(--accent-color);
 }
 .login-signup-links:active{
-    color: #facc15;
+    color: var(--accent-hover);
 }
 
 /*nav-bar*/
@@ -269,7 +253,7 @@ body{
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: #ca8a04;
+    background: var(--accent-color);
     margin: 3px 0;
     transition: 0.3s;
 }
@@ -286,9 +270,9 @@ body{
     top: 80px; /* Below header */
     left: 0;
     right: 0;
-    background: #1e293b;
+    background: var(--bg-card);
     padding: 20px;
-    border-bottom: 1px solid #334155;
+    border-bottom: 1px solid var(--border-color);
 }
 .nav-icons{
 height: 24px;
@@ -299,11 +283,11 @@ fill: currentColor;
 #nav-bar a{
       display: inline-block;
       text-decoration: none;
-      color: #94a3b8;
+      color: var(--text-muted);
       padding: 8px 12px;
       letter-spacing: 0.5px;
       font-size: 0.9rem;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: var(--font-body);
       text-transform: uppercase;
       font-weight: 500;
 }
@@ -313,19 +297,19 @@ fill: currentColor;
     border-radius: 4px;
 }
 #nav-bar a:active{
-    color: #ca8a04;
+    color: var(--accent-color);
     background-color: transparent;
 }
 /*footer*/
 footer{
-    background-color: #0f172a;
-    border-top: 1px solid #334155;
+    background-color: var(--bg-body);
+    border-top: 1px solid var(--border-color);
     padding: 50px;
     position: relative;
     text-align: center;
     font-size: 0.9rem;
     font-family: sans-serif;
-    color: #64748b;
+    color: var(--text-footer);
     width: 100%;
     bottom:0
 }
