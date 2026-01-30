@@ -146,20 +146,15 @@ body{
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     border: 1px solid var(--border-color);
     box-sizing: border-box;
-    /* animation: rj1 0.7s infinite alternate; */
 }
-
-/* @keyframes rj1 {
-    from { width: 100%; }
-    to { width: 90%; }
-} */
 
 /* Split each content section into text (left) and media (right) */
 .content-sections > div {
     display: flex;
     gap: 0;
     align-items: stretch;
-    min-height: 350px;
+    height: 180px; /* Further reduced height for a more compact look */
+    overflow: hidden; /* Prevents content from overflowing the card */
 }
 .content-sections > div .section-text { 
     flex: 1 1 60%; /* Text takes priority */
